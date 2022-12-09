@@ -1,0 +1,4 @@
+FROM openjdk:11-jdk-slim
+ADD build/libs/demo-*.jar demo.jar
+
+ENTRYPOINT ["java", "-jar", "/demo.jar", "${OPTS_ARGS}"]
